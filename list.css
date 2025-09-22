@@ -7,14 +7,14 @@
 .container {
   width: 100%;
   min-height: 100vh;
-  background-color: blue ;
-  padding: 10px;
+  background: linear-gradient(125deg,rgb(89, 35, 139),purple) ;
+  padding: 15px;
+  margin: -10px;
 }
 .todo {
   background: white;
   width: 100%;
   max-width: 500px;
-  /*height: 400px;*/
   margin: 100px auto 20px;
   padding:40px 30px 70px;
   border-radius: 10px;
@@ -54,4 +54,48 @@ button{
   font-size: 16px;
   cursor: pointer;
   border-radius: 40px;
+}
+
+ul li{
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+ul li::before{
+  content: '';
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url(image/windsock.png);
+  background-size: cover;
+  background-position: center
+  top: 12px;
+  left: 8px;
+}
+ul li.checked{
+  color: blue;
+  text-decoration: line-through;
+}
+ul li.checked::before{
+background-image: url(image/windsock\ \(1\).png) ;
+}
+ul li span{
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: blue;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+ul li span:hover{
+  background: skyblue;
+
 }
